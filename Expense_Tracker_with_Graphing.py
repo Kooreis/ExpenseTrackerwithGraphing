@@ -1,8 +1,7 @@
-import matplotlib.pyplot as plt
-from datetime import datetime
+class ExpenseTracker:
+    def __init__(self):
+        self.expenses = []
 
-class Expense:
-    def __init__(self, name, amount, date):
-        self.name = name
-        self.amount = amount
-        self.date = date
+    def add_expense(self, name, amount):
+        date = datetime.now().strftime("%Y-%m-%d")
+        self.expenses.append(Expense(name, amount, date))
